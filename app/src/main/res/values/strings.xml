@@ -4,5 +4,34 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
     <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>Visiting Companies</item>
+        <item>Visited Companies</item>
+    </string-array>
+    <string name="activity_title_about_us">About Us</string>
+    <string name="action_logout">Logout</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_visiting">Visiting</string>
+    <string name="nav_visited">Visited</string>
+    <string name="nav_about_us">About Us</string>
+    <string name="nav_privacy_policy">Privacy Policy</string>
+
+    <string name="title_activity_about_us">AboutUsActivity</string>
+    <string name="title_activity_privacy_policy">PrivacyPolicyActivity</string>
+
+    <string-array name="sections">
+        <item>Item1</item>
+        <item>Item2</item>
+        <item>Item3</item>
+    </string-array>
 </resources>
