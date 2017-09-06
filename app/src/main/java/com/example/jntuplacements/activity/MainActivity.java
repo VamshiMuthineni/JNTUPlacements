@@ -31,6 +31,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.jntuplacements.fragment.HomeFragment;
 import com.example.jntuplacements.fragment.VisitedFragment;
 import com.example.jntuplacements.fragment.VisitingFragment;
+import com.example.jntuplacements.other.AppUtil;
 import com.example.jntuplacements.other.CircleTransform;
 
 import java.net.URI;
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity
         actionBarDrawerToggle.syncState();
 
         //load nav Header
-        txtName.setText("Vamshi Muthineni"); //logged in user data
+        txtName.setText(getIntent().getStringExtra("UserEmail")); //logged in user data
         txtWebsite.setText("website or email");
 
         displaySelectedItem();
@@ -115,12 +116,19 @@ public class MainActivity extends AppCompatActivity
                 navItemIndex = 2;
                 fragment = new VisitedFragment();
                 break;
+            case R.id.nav_logout:
+                navItemIndex = 3;
+                AppUtil.logOut(getApplicationContext());
+                finish();
+                return;
             default:
                 navItemIndex = 0;
                 fragment = new HomeFragment();
         }
 
-        getSupportActionBar().setTitle(activityTitles[navItemIndex]);
+        if(navItemIndex<3) {
+            getSupportActionBar().setTitle(activityTitles[navItemIndex]);
+        }
         navigationView.getMenu().getItem(navItemIndex).setChecked(true);
 
         if(fragment!=null){
